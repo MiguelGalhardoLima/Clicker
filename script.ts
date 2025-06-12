@@ -14,7 +14,7 @@ custoP.textContent = custo.toString();
 
 let maisClick:number = +1;
 const plusClickP = document.getElementById("plusClick") as HTMLParagraphElement;
-plusClickP.textContent = maisClick.toString();
+plusClickP.textContent ="Contagem de clicks:+"+maisClick.toString();
 
 
 
@@ -27,7 +27,7 @@ botaoMenos?.addEventListener("click", () =>{
         maisClick+=1; //adiciona quantidade de click
        
 
-        plusClickP.textContent = maisClick.toString();
+        plusClickP.textContent ="Contagem de clicks:+"+maisClick.toString();
         custoP.textContent = custo.toString();
         valor.textContent = count.toString();
 
@@ -41,6 +41,9 @@ botaoMais?.addEventListener("click", () => {
 
     count += maisClick;
     valor.textContent = count.toString();
+    
+    const imagemDonut = document.getElementById("imagemDonut");
+    imagemDonut?.classList.add("Ativado");
 
     if (count < custo) {
         botaoMenos?.setAttribute("disabled", "true");
